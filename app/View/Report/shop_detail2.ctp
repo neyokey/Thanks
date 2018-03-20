@@ -124,8 +124,9 @@ $(function () {
 
 	// Get context with jQuery - using jQuery's .get() method.
 	var radarChartCanvas = $("#radarChart").get(0).getContext("2d");
+	radarChartCanvas.canvas.width = 400;
+	radarChartCanvas.canvas.height = 300;
 	// This will get the first returned node in the jQuery collection.
-	// var radarChart = new Chart(radarChartCanvas);
 
 	var radarChartData = {
 		labels: ["平均thanks!頻度", "送信アクティブ率", "起動アクティブ率"],
@@ -146,23 +147,26 @@ $(function () {
 
 	$('#tab2').on('shown.bs.tab', function (e) {
         areaChart.destroy();
-       	radarChart = new Chart(radarChartCanvas).Radar(radarChartData,radarChartOptions);
+       	radarChart1 = new Chart(radarChartCanvas).Radar(radarChartData,radarChartOptions);
     });
 
     $('#tab1').on('shown.bs.tab', function (e) {
-        radarChart.destroy();
+        radarChart1.destroy();
         areaChart = new Chart(areaChartCanvas).Line(areaChartData,areaChartOptions);    
     });
     $('#tab3').on('shown.bs.tab', function (e) {
-    	radarChart.destroy(); 
+    	if(typeof radarChart1 != 'undefined')
+    		radarChart1.destroy(); 
         areaChart.destroy();     
     });
     $('#tab4').on('shown.bs.tab', function (e) {
-    	radarChart.destroy(); 
+    	if(typeof radarChart1 != 'undefined')
+    		radarChart1.destroy();  
         areaChart.destroy();     
     });
     $('#tab5').on('shown.bs.tab', function (e) {
-    	radarChart.destroy(); 
+    	if(typeof radarChart1 != 'undefined')
+    		radarChart1.destroy();  
         areaChart.destroy();     
     });
 

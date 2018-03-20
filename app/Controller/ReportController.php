@@ -809,7 +809,8 @@ class ReportController extends AppController {
 		} else {
 			$render_file = 'shop_detail2';
 		}
-		//var_dump($data[1]); die;
+
+		#tab-report
 		$sumThanksSends = 0;
 		$sumThanksReceives = 0;
 		$countUser= 0;
@@ -824,14 +825,21 @@ class ReportController extends AppController {
 		$datediff = abs(strtotime($_from) - strtotime($_to));
 		$day= floor($datediff / (60*60*24));
 		$sumAll = $sumThanksSends + $sumThanksReceives;
-		$X = round((($sumAll*7) / ($day * $countUser)) * 4 / 3,2);
-		$Y = 4;
-		$Z = round ($countUserThanked/$countUser*5,2);		
+		# X,Y,Z is radar chart data
+		# 平均thanks!頻度
+		$X = round((($sumAll*7) / ($day * $countUser)) * 4 / 3,1); 	
+		# 起動アクティブ率
+		$Y = 3.5;
+		# 送信アクティブ率
+		$Z = round ($countUserThanked/$countUser*5,1);	
+		# Max value = 5	
 		if($X > 5)
 			$X = 5;
+		if($Y > 5)
+			$Y = 5;
 		if($Z > 5)
 			$Z = 5;
-		$XYZ = round((($X*$Y + $Y*$Z + $Z*$X)/(5*3*3))*100) ;
+		$XYZ = round((($X*$Y + $Y*$Z + $Z*$X)/(5*5*3))*100) ;
 		if($XYZ > 100)
 			$XYZ = 100;
 		$this->title = $shopData['MstAdminUser']['aname'].'のサンクス数：'.date('Y/n/j', $from).'　～　'.date('Y/n/j', $to);

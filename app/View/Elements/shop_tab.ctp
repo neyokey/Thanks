@@ -34,13 +34,13 @@
 					</div>
 					<div class="box-body">
 						<div class="col-lg-12 col-md-12">
-							<div class="col-lg-7 col-md-7">
+							<div class="col-lg-8 col-md-8">
 								<div class="col-lg-12 col-md-12">
 									<h4 class="box-title"><i class="fa fa-thumbs-o-up"></i>チームワーク指数 &nbsp<i class="fa fa-question-circle"></i></h4>	
 								</div>
 								<div class="col-lg-12 col-md-12">
-									<div class="col-lg-8 col-md-8 text-center">
-										<h1><?php echo $XYZ ;?></h1>
+									<div class="col-lg-8 col-md-8 text-center" style="font-size: 100px">
+										<?php echo $XYZ ;?>
 									</div>
 									<div class="col-lg-4 col-md-4">
 										<div class="col-lg-12 col-md-12">
@@ -50,7 +50,7 @@
 											&nbsp
 										</div>
 										<div class="col-lg-12 col-md-12">
-											/100
+											<h1>/100</h1>
 										</div>
 									</div>
 								</div>
@@ -102,8 +102,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-5 col-md-5" >
+							<div class="col-lg-4 col-md-4" >
 								<div class="chart-responsive">
+									<br>
 									<canvas id="radarChart"></canvas>
 								</div>
 							</div>
@@ -264,9 +265,47 @@
 						</div>
 							<div id="hbgReport" class="col-lg-12 col-md-12">
 								<br>
+								<br>
 							</div>
 							<div id="bgReport" class="col-lg-12 col-md-12 text-center">
-								a
+								<div class="col-lg-1 col-md-1 text-center">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar4.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar4.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar2.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar1.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar4.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar2.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar1.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+								</div>
+								<div class="col-lg-1 col-md-1 text-center">
+									<img class="hinhanh " border="1" height=50 width=50 src="/newshindan/img/avatar3.png">
+								</div>
 							</div>
 					</div>
 				</div>
