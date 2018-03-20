@@ -1,0 +1,25 @@
+.boxhinhanh{
+		float: left;
+		padding: 10px;
+	}
+	.linkhinhanh{
+		text-decoration: none;
+		color: black;
+	}
+    .hinhanh {
+		border-radius:50%;
+		-moz-border-radius:50%;
+		-webkit-border-radius:50%;
+	}
+	#hbgReport{
+		background: url('/newshindan/img/hbg_report.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center; 
+	}
+	#bgReport{
+		background: url('/newshindan/img/bg_report.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 0px;
+	}
